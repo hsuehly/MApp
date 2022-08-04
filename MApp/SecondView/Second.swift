@@ -10,24 +10,17 @@ import SwiftUI
 struct SecondView: View {
     @Binding  var STapNum: Int
     @Binding var SisActive: Bool
-    @State private var TisAction = false
- 
 
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack {
                 FireworksView()
                }
-            .onChange(of: SisActive, perform: { newValue in
-                if newValue {
-                    TisAction = true
-                }
-            })
-            NavigationLink(destination: ThirdView(), isActive: $TisAction){
+            NavigationLink(destination: ThirdView(), isActive: $SisActive){
                 
             }
             
-        }
+//        }
         .navigationBarBackButtonHidden(true)
 
     }

@@ -42,6 +42,7 @@ struct ContentView: View {
                             print("跳转",SisActive)
                          
                             STapNum = 0
+//                            isActive = false
                         }
                     }),isActive: $isActive){
 
