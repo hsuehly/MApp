@@ -13,6 +13,9 @@ struct ContentView: View {
     @State private var Count = 0
     @State private var isActive = false
     @State private var TapNum = 0
+    @State private var STapNum = 0
+    @State private var SisActive = false
+
 
     var body: some View {
         NavigationView {
@@ -30,9 +33,22 @@ struct ContentView: View {
                             TapNum = 0
                         }
                     }
-                NavigationLink( destination: SecondView(),isActive: $isActive){
+                NavigationLink( destination: SecondView(STapNum: $STapNum,SisActive: $SisActive).onTapGesture {
+                    STapNum += 1
+                }
+                    .onChange(of: STapNum, perform: { newVale in
+                        if newVale == 2 {
+                            SisActive = true
+                            print("跳转",SisActive)
+                         
+                            STapNum = 0
+                        }
+                    }),isActive: $isActive){
 
                 }
+//                NavigationLink(destination: ThirdView(), isActive:$SisActive ) {
+//
+//                }
 
             }
             .ignoresSafeArea(.all)

@@ -8,7 +8,7 @@
 import SwiftUI
 struct Fireworks: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {
-        print("2222")
+//        print("2222")
     }
     
     func makeUIView(context: Context) -> UIView {
@@ -75,19 +75,26 @@ struct Fireworks: UIViewRepresentable {
     }
 }
 struct FireworksView: View {
+//    @Binding var STapNum: Int
     var body: some View {
         ZStack {
                     //背景颜色置黑，模拟夜空
 //                    Color.black.ignoresSafeArea()
                     Fireworks()
                         .ignoresSafeArea()
+//                        .onTapGesture {
+//                            print("+1")
+//                            STapNum += 1
+//
+//                        }
+
                 }
     
     }
 }
-
-struct FireworksView_Previews: PreviewProvider {
-    static var previews: some View {
-        FireworksView()
-    }
-}
+//
+//struct FireworksView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FireworksView()
+//    }
+//}

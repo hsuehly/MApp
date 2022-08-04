@@ -19,7 +19,7 @@ struct HeartBeat: UIViewRepresentable {
             k.autoreverses = true
             k.duration = 1
             heartImage.layer.add(k, forKey: "SHOW")
-        print("ddd")
+//        print("ddd")
         //1.创建动画对象
 //            let anim = CABasicAnimation()
 //
@@ -40,7 +40,7 @@ struct HeartBeat: UIViewRepresentable {
     
     }
     func updateUIView(_ uiView: UIView, context: Context) {
-        print("ooo")
+//        print("ooo")
         print(uiView.frame)
     }
 

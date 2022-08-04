@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ThirdView: View {
+    @State var count = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HeartViewOne(Count: $count)
+            .onTapGesture {
+                count += 1
+            }
     }
+
 }
 
-struct Third_Previews: PreviewProvider {
-    static var previews: some View {
-        ThirdView()
-    }
-}
+//struct Third_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThirdView()
+//    }
+//}
